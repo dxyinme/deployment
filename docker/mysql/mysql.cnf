@@ -1,0 +1,14 @@
+[mysqld]
+max_connections=4000
+max_allowed_packet=20M
+skip-host-cache
+skip-name-resolve
+datadir=/var/lib/mysql
+socket=/var/run/mysqld/mysqld.sock
+secure-file-priv=/var/lib/mysql-files
+user=mysql
+pid-file=/var/run/mysqld/mysqld.pid
+
+
+[client]
+socket=/var/run/mysqld/mysqld.sock
