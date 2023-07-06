@@ -1,0 +1,19 @@
+# Copyright VMware, Inc.
+# SPDX-License-Identifier: APACHE-2.0
+
+version: '2'
+
+services:
+  postgresql:
+    image: bitnami/postgresql:15
+    restart: always
+    ports:
+      - '5432:5432'
+    volumes:
+      - '/path/to/yourpostgresql_data:/bitnami/postgresql'
+    environment:
+      - 'ALLOW_EMPTY_PASSWORD=yes'
+
+volumes:
+  postgresql_data:
+    driver: local
